@@ -25,29 +25,30 @@ const WavyBackground = () => {
     window.addEventListener('resize', resizeCanvas);
     resizeCanvas();
 
+    // Improved wave parameters for more dynamic movement
     const waves = [
       {
-        color: 'rgba(30, 144, 255, 0.3)', // Dodger Blue
-        amplitude: 25,
-        frequency: 0.01,
-        speed: 0.015,
+        color: 'rgba(30, 144, 255, 0.4)', // Dodger Blue with higher opacity
+        amplitude: 40, // Increased amplitude
+        frequency: 0.015,
+        speed: 0.03, // Doubled speed
         length: 0.005,
         offset: 0
       },
       {
-        color: 'rgba(0, 191, 255, 0.3)', // Deep Sky Blue
-        amplitude: 30,
-        frequency: 0.015,
-        speed: 0.01,
-        length: 0.003,
+        color: 'rgba(0, 191, 255, 0.4)', // Deep Sky Blue with higher opacity
+        amplitude: 50, // Increased amplitude
+        frequency: 0.02,
+        speed: 0.025, // Increased speed
+        length: 0.004,
         offset: 0
       },
       {
-        color: 'rgba(65, 105, 225, 0.3)', // Royal Blue
-        amplitude: 20,
-        frequency: 0.02,
-        speed: 0.02,
-        length: 0.004,
+        color: 'rgba(65, 105, 225, 0.4)', // Royal Blue with higher opacity
+        amplitude: 35, // Increased amplitude
+        frequency: 0.025,
+        speed: 0.035, // Increased speed
+        length: 0.006, // Higher frequency for sharper waves
         offset: 0
       }
     ];
@@ -63,7 +64,8 @@ const WavyBackground = () => {
       ctx.beginPath();
       ctx.moveTo(0, height / 2);
 
-      for (let x = 0; x < width; x++) {
+      // Draw more detailed sine wave with sharper curves
+      for (let x = 0; x < width; x += 2) { // Smaller steps for more detail
         const y = Math.sin(x * length + offset) * amplitude + height / 2;
         ctx.lineTo(x, y);
       }
@@ -115,7 +117,7 @@ const WavyBackground = () => {
     <canvas 
       ref={canvasRef} 
       className="fixed inset-0 z-[-1] w-full h-full"
-      style={{ filter: 'blur(30px)' }}
+      style={{ filter: 'blur(20px)' }} // Reduced blur for sharper waves
     />
   );
 };
