@@ -27,7 +27,7 @@ const WavyBackground = () => {
 
     const waves = [
       {
-        color: 'rgba(76, 0, 255, 0.2)',
+        color: 'rgba(30, 144, 255, 0.3)', // Dodger Blue
         amplitude: 25,
         frequency: 0.01,
         speed: 0.015,
@@ -35,7 +35,7 @@ const WavyBackground = () => {
         offset: 0
       },
       {
-        color: 'rgba(26, 176, 255, 0.2)',
+        color: 'rgba(0, 191, 255, 0.3)', // Deep Sky Blue
         amplitude: 30,
         frequency: 0.015,
         speed: 0.01,
@@ -43,7 +43,7 @@ const WavyBackground = () => {
         offset: 0
       },
       {
-        color: 'rgba(255, 0, 140, 0.2)',
+        color: 'rgba(65, 105, 225, 0.3)', // Royal Blue
         amplitude: 20,
         frequency: 0.02,
         speed: 0.02,
