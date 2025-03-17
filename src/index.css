@@ -103,6 +103,18 @@
   }
 }
 
+@keyframes wavyAnim {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .text-shimmer {
   background: linear-gradient(90deg, #ffffff, #a9c2ff, #ffffff, #ffffff);
   background-size: 300% 100%;
@@ -175,3 +187,21 @@
   left: -50%;
   opacity: 1;
 }
+
+.wavy-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.wave {
+  position: absolute;
+  opacity: 0.4;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #4c00ff, #1ab0ff, #ff008c);
+  background-size: 300% 300%;
+  animation: wavyAnim 15s ease infinite;
+}
+

@@ -1,13 +1,13 @@
 
 import React from 'react';
-import AuroraBackground from '../components/AuroraBackground';
+import WavyBackground from '../components/WavyBackground';
 import NavBar from '../components/NavBar';
 import Hero from '../components/Hero';
 
 const Index = () => {
   return (
     <div className="min-h-screen relative">
-      <AuroraBackground />
+      <WavyBackground />
       <div className="container mx-auto relative z-10">
         <NavBar />
         <Hero />
